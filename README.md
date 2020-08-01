@@ -1,2 +1,2 @@
 # mcc-quilt
-The Repository for the McCormick Quilt
+Welcome to the Repository for the McCormick Quilt Project!
