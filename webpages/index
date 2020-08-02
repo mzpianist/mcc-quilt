@@ -1,1 +1,176 @@
+<!doctype html>
+<html>
+<head>
+    <style>
+        /*This is the style for the head pictures*/
+    .column {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0px;
+    }
+    .row {
+      flex: 20%;
+      max-height:
+    }
+    /*DO NOT CHANGE THE ABOVE!!!!!*/
+    .row img {
+      margin-top: 0px;
+      vertical-align: middle;
+      width: 100%;
+    }  
+    
+    .centerrow {
+        flex: 60%;
+        max-height:
+        padding: 0 0px;
+    }       
+    .centerrow img {
+        margin-top: 0px;
+        vertical-align: middle;
+        width: 100%;
+    }
+        
+    /*This is the picture layout style for main body of quilt */ 
+    .mrow {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0 0px;
+        }  
+    .mcolumn {
+      flex: 20%; /*This should be less than 1/(however many columns you want to have)*/
+      max-width:
+        }  
+    .mcolumn img {
+      margin-top: 0px;
+      vertical-align: middle;
+      width: 100%;
+        }  
+        
+    /*This is a flip box*/
+    label {
+    -webkit-perspective: 100%;
+    perspective: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    display: block;
+    width:58%;
+    height:95%;
+    position: absolute;
+    left: 50%;
+    top: 49%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.card {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: all 400ms;
+    transition: all 400ms;
+    z-index: 20;
+}
+
+    .card div {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        border-radius: 0px;
+    }
+
+    .card .back {
+        background: transparent;
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+    }
+
+label:hover .card {
+}
+
+input {
+    display: none;
+}
+
+:checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+
+label:hover :checked + .card {
+    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+}
+        
+    </style>
+
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <!-- Please write this in all of your webpages, it lets you show web pages on other devices-->
+<title>The McCormick Quilt</title>
+</head>
+<body>
+    <!-- This is the body for the header-->
+    <div class = "column">
+        <div class = "row">
+            <img src = "../Placeholders/What is the McC Quilt.PNG" alt = "what is the McC Quilt">
+            <img src =  "../Placeholders/Make your own quilt.PNG" alt = "make your own">
+        </div>
+    
+        <div class = "centerrow">
+            <label>
+    <input type="checkbox"  />
+    <div class="card">
+        <div class="front">
+            <img src= "../Placeholders/McCormick_mural_design.png" alt = "big centerpiece">
+
+        </div>
+        <div class="back">
+        <img src= "../Placeholders/backside of centerpiece placeholder.png" alt="mcc centerpiece backside" >
+    
+        
+        </div>
+    </div>
+</label>
+        </div>
+        
+        <div class = "row">
+            <img src = "../Placeholders/Take a Virtural McC tour.PNG?.png" alt = "Take a virtual McC tour">
+            <img src = "../Placeholders/More info.png" alt = "more info?">
+        </div>
+
+    </div>
+    <!-- Start of the "main" body of the quilt -->
+    
+    <div class = "mrow">
+        <div class = "mcolumn">
+        <img src= "../Placeholders/IMG_0838.PNG" alt = "placeholder 2">
+        <img src= "../Placeholders/IMG_0840.PNG" alt = "placeholder 3"> 
+        <img src= "../Placeholders/IMG_0840.PNG" alt = "placeholder 3"> 
+        <!-- If you want to add a picture in the first column, paste the img src thing here -->
+        </div>
+        <div class = "mcolumn">
+        <img src="../Placeholders/IMG_0839.PNG" alt = "placeholder 1"> 
+        <img src= "../Placeholders/IMG_0838.PNG" alt = "placeholder 2">
+        <!-- If you want to add a picture in the second column, paste the img src thing here. Etc -->
+        </div>
+        <div class = "mcolumn">
+        <img src= "../Placeholders/IMG_0840.PNG" alt = "placeholder 3"> 
+        <img src="../Placeholders/IMG_0839.PNG" alt = "placeholder 1">  
+        </div>
+        <div class = "mcolumn">
+        <img src="../Placeholders/IMG_0839.PNG" alt = "placeholder 1">
+        <img src= "../Placeholders/IMG_0838.PNG" alt = "placeholder 2"> 
+        </div>
+  
+
+    </div>  
+    
+  
+</body>
+</html>
 
