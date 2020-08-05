@@ -2,6 +2,9 @@
 <html>
 <head>
     <style>
+        body{
+            background-color:#EED8D1
+        }
         /*This is the style for the head pictures*/
     .column {
       display: flex;
@@ -10,7 +13,7 @@
     }
     .row {
       flex: 20%;
-      max-height:
+      max-width:20%
     }
     /*DO NOT CHANGE THE ABOVE!!!!!*/
     .row img {
@@ -21,7 +24,7 @@
     
     .centerrow {
         flex: 60%;
-        max-height:
+        max-width:60%
         padding: 0 0px;
     }       
     .centerrow img {
@@ -37,8 +40,8 @@
       padding: 0 0px;
         }  
     .mcolumn {
-      flex: 20%; /*This should be less than 1/(however many columns you want to have)*/
-      max-width:
+      flex: 25%; /*This should be less than 1/(however many columns you want to have)*/
+      max-width:25%
         }  
     .mcolumn img {
       margin-top: 0px;
@@ -53,8 +56,8 @@
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
     display: block;
-    width:60%;
-    height:100%;
+    width:58%;
+    height:97%;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -71,7 +74,7 @@
     transform-style: preserve-3d;
     -webkit-transition: all 400ms;
     transition: all 400ms;
-    z-index: 0;
+    z-index: -20;
 }
 
     .card div {
@@ -86,8 +89,8 @@
 
     .card .back {
         background: transparent;
-        -webkit-transform: rotateX(180deg);
-        transform: rotateX(180deg);
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg);
     }
 
 label:hover .card {
@@ -98,13 +101,13 @@ input {
 }
 
 :checked + .card {
-    transform: rotateX(180deg);
-    -webkit-transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
 
 label:hover :checked + .card {
-    transform: rotateX(180deg);
-    -webkit-transform: rotateX(180deg);
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
 }
         
     </style>
@@ -114,23 +117,26 @@ label:hover :checked + .card {
 <title>The McCormick Quilt</title>
 </head>
 <body>
+    
     <!-- This is the body for the header-->
     <div class = "column">
         <div class = "row">
+            
             <img src = "../Website images/about_mcc_quilt.png" alt = "About the actual McC Quilt">
+            <a href="https://forms.gle/z1pR8h3GY7frW5RE6">
             <img src =  "../Website images/submit.png" alt = "Submit your own quilt square">
+            </a>
         </div>
     
         <div class = "centerrow">
             <label>
-    <input type="checkbox"  />
+    <input type="checkbox"/>
     <div class="card">
         <div class="front">
             <img src= "../Website images/McCormick Centerpiece.png" alt = "big centerpiece">
-
         </div>
         <div class="back">
-        <img src= "../Placeholders/backside of centerpiece placeholder.png" alt="mcc centerpiece backside" >
+        <img src= "../Website images/centerpiece backside.png" alt="mcc centerpiece backside" >
     
         
         </div>
@@ -139,7 +145,9 @@ label:hover :checked + .card {
         </div>
         
         <div class = "row">
+            <a href = "quilt shop.html">
             <img src = "../Website images/quilt_shop.png" alt = "Quilt shop">
+                </a>
             <img src = "../Website images/links_to_other_resources.png" alt = "links to more resources">
         </div>
 
@@ -173,4 +181,3 @@ label:hover :checked + .card {
   
 </body>
 </html>
-
