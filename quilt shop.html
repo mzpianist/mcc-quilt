@@ -9,13 +9,13 @@
       flex: 100%;
       max-width:100%
     }
-    /*DO NOT CHANGE THE ABOVE!!!!!*/
     .firstrow img {
       margin-top: 0px;
       vertical-align: middle;
       width: 100%;
       z-index: -1
     }   
+
         
         .mrow {
       display: flex;
@@ -25,7 +25,8 @@
         
         .quilt {
             flex:25%;
-            max-width: 25%
+            max-width: 25%;
+            left:10px
         }
         .quilt img {
         padding:1px;
@@ -43,6 +44,12 @@
           vertical-align: middle;
           width: 100%;
         }
+        
+        .homebutton{
+            position: absolute;
+            right:5%;
+            bottom:5%;
+        }
     </style>
 <meta charset="UTF-8">
 <title>Quilt Shop</title>
@@ -54,17 +61,27 @@
        
         <div class = "mrow">
             <div class = "firstrow">
-            <img src = "../Website images/Quilt-shop-header.png" alt = "quilt shop header">
+            <img src = "webpage-images/quilt_shop_header.png" alt = "quilt shop header">
             </div>
         </div>
+        
+        
+        <div class = "homebutton">
+            <a href = "Index.html">
+                <img src = "webpage-images/home-button.png" alt = "home button" width = "65">
+            </a>
+
+        </div>
+        
+        
         <div class = "mrow">
             <div class = "quilt">
-                <a href= "../Website images/Template.png" download>
-                    <img src = "../Website images/Template.png" alt = "template">
+                <a href= "webpage-images/Template.png" download>
+                    <img src = "webpage-images/Click-Template.png" alt = "template">
                 </a> 
             </div>
             <div class = "explanation"> 
-                <img src = "../Website images/exp-quilt-template.png" alt = "explanation">
+                <img src = "webpage-images/exp-quilt-template.png" alt = "explanation">
             </div>
         </div>
     </div>
