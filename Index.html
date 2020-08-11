@@ -49,6 +49,18 @@
       width: 100%;
         }  
         
+        .section{
+            flex:100%;
+            max-width:100%
+        }
+        
+        .section img {
+      margin-top: 0px;
+      vertical-align: middle;
+      width: 100%;
+        } 
+        
+        
     /*This is a flip box*/
     label {
     -webkit-perspective: 100%;
@@ -81,6 +93,7 @@
         position: absolute;
         height: 100%;
         width: 100%;
+        max-height:400px;
         background: transparent;
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
@@ -147,8 +160,6 @@ label:hover :checked + .card {
         </div>
         <div class="back">
         <img src= "./webpage-images/centerpiece backside.png" alt="mcc centerpiece backside" >
-    
-        
         </div>
     </div>
 </label>
@@ -162,17 +173,22 @@ label:hover :checked + .card {
         </div>
 
     </div>
+    
+    <div class = "section">
+    <img src = "webpage-images/divider.png" alt = "info">
+    </div>
+    
+    
+    
     <!-- Start of the "main" body of the quilt -->
     <div class = "mrow">
         <div class = "mcolumn">
         <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <!-- If you want to add a picture in the first column, paste the img src thing here -->
+        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">  
         </div>
         <div class = "mcolumn">
         <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <!-- If you want to add a picture in the second column, paste the img src thing here. Etc -->
+        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">  
         </div>
         <div class = "mcolumn">
         <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
@@ -184,7 +200,12 @@ label:hover :checked + .card {
         </div>
   
 
-    </div>  
+    </div> 
+    
+    <div class = "section">
+        <img src = "webpage-images/Footer.png" alt = "footer">
+    
+    </div>
     
   
 </body>
