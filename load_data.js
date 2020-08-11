@@ -35,7 +35,6 @@ function initClient() {
   });
 }
 
-
 /**
  * Print the names and majors of students in a sample spreadsheet:
  * https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
@@ -46,20 +45,31 @@ function listImages() {
     range: 'B:J',
   }).then(function (response) {
     var range = response.result;
+    var response_list = []
     if (range.values.length > 0) {
       //response_dict = {'Type': [], 'Name': [], 'Email':[], 'Year':[], 'Image':[], 'Bio':[], 'Comments':[], 'Socials':[], 'Accounts':[]}
-      response_list = []
       for (i = 1; i < range.values.length; i++) {
         var row = range.values[i];
         response_list.push(row)
       }
       shuffle(response_list)
+      loadImages(response_list)
     } else {
       console.log('No data found.');
     }
   }, function (response) {
     console.log('Error: ' + response.result.error.message);
   });
+}
+
+function loadImages(response_list) {
+  const root = document.getElementById('root')
+  for (i = 0; i < response_list.length; i++){
+    const column = root.children[i%4]
+    const image = document.createElement("img")
+    image.setAttribute("src",response_list[i][4].replace("open","thumbnail"))
+    column.appendChild(image)
+  }
 }
 
 function shuffle(array) {

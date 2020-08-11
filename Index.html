@@ -41,12 +41,13 @@
         }  
     .mcolumn {
       flex: 25%; /*This should be less than 1/(however many columns you want to have)*/
-      max-width:25%
+      width: 25%;
         }  
     .mcolumn img {
       margin-top: 0px;
       vertical-align: middle;
       width: 100%;
+      height: 25vw;
         }  
         
         .section{
@@ -181,30 +182,15 @@ label:hover :checked + .card {
     
     
     <!-- Start of the "main" body of the quilt -->
-    <div class = "mrow">
-        <div class = "mcolumn">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">  
-        </div>
-        <div class = "mcolumn">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">  
-        </div>
-        <div class = "mcolumn">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">  
-        </div>
-        <div class = "mcolumn">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        <img src="webpage-images/placeholder-quilt.PNG" alt = "placeholder">
-        </div>
-  
-
-    </div> 
+    <div id = "root" class = "mrow">
+        <div id = "column1" class = "mcolumn"></div>
+        <div id = "column2" class = "mcolumn"></div>        
+        <div id = "column3" class = "mcolumn"></div>       
+        <div id = "column4" class = "mcolumn"></div>       
+    </div>
     
     <div class = "section">
         <img src = "webpage-images/Footer.png" alt = "footer">
-    
     </div>
     
   
