@@ -106,6 +106,7 @@ function shuffle(array) {
 }
 
 function handleClick(array){
+  // 'Type': [], 'Name': [], 'Email':[], 'Year':[], 'Image':[], 'Bio':[], 'Comments':[], 'Socials':[], 'Accounts':[]}
   document.getElementById('root').onclick = function(event){
     const popup = document.createElement('div');
     popup.id = 'popup';
@@ -114,7 +115,16 @@ function handleClick(array){
     document.body.appendChild(popup);
     popup.appendChild(popupNote);
     const index = event.target.getAttribute('key');
-    popupNote.textContent = array[index];
+   const { type, 
+    person,
+     email, 
+     year, 
+     imageSRC, 
+     bio, 
+     comments, 
+     socials, 
+     accounts } = array[index];
+    popupNote.textContent = type;
     
   }
 }
