@@ -105,26 +105,32 @@ function shuffle(array) {
   return array;
 }
 
-function handleClick(array){
+function handleClick(array) {
   // 'Type': [], 'Name': [], 'Email':[], 'Year':[], 'Image':[], 'Bio':[], 'Comments':[], 'Socials':[], 'Accounts':[]}
-  document.getElementById('root').onclick = function(event){
-    const popup = document.createElement('div');
-    popup.id = 'popup';
-    const popupNote = document.createElement('div');
-    popupNote.id = 'popup-note';
+  document.getElementById("root").onclick = function (event) {
+    const popup = document.createElement("div");
+    popup.id = "popup";
+    const popupNote = document.createElement("div");
+    popupNote.id = "popup-note";
     document.body.appendChild(popup);
     popup.appendChild(popupNote);
-    const index = event.target.getAttribute('key');
-   const { type, 
-    person,
-     email, 
-     year, 
-     imageSRC, 
-     bio, 
-     comments, 
-     socials, 
-     accounts } = array[index];
+    const index = event.target.getAttribute("key");
+    const {
+      type,
+      person,
+      email,
+      year,
+      imageSRC,
+      bio,
+      comments,
+      socials,
+      accounts,
+    } = array[index];
     popupNote.textContent = type;
-    
-  }
+
+    popup.onclick = function (event) {
+      document.body.removeChild(popup);
+      console.log(event.target)
+    };
+  };
 }
