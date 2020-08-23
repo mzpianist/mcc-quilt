@@ -21,7 +21,6 @@
       vertical-align: middle;
       width: 100%;
     }  
-    
     .centerrow {
         flex: 60%;
         max-width:60%
@@ -123,6 +122,32 @@ label:hover :checked + .card {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
 }
+
+.popup {
+    display: flex;
+    visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width:100%;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    z-index: 100;
+    margin: auto;
+    align-items: center;
+    background-color: rgb(170,170,170,.5);
+}
+.popup-note {
+    background-color: white;
+    height: 50%;
+    width:50%;
+    margin: auto;
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+}
         
     </style>
 
@@ -133,6 +158,8 @@ label:hover :checked + .card {
 
 <script src="./load_data.js">
 </script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
 <script async defer src="https://apis.google.com/js/api.js" onload="this.onload=function(){};handleClientLoad()"
   onreadystatechange="if (this.readyState === 'complete') this.onload()">
@@ -141,6 +168,37 @@ label:hover :checked + .card {
 </head>
 
 <body>
+         <!-- <div class="container">
+        <h2>Modal Example</h2> -->
+        <!-- Trigger the modal with a button -->
+        <!-- <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal"
+        onclick="">Open Modal</button> -->
+        <!-- Modal -->
+        <!-- <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog"> -->
+            <!-- Modal content-->
+            <!-- <div class="modal-content popup" >
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Modal Header</h4>
+              </div>
+              <div class="modal-body">
+                <p>Some text in the modal.</p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div> -->
+   
+
+    <div class='popup'>
+        <div class='popup-note'>
+            <button type="button" class="close" data-dismiss="modal">×</button>
+        </div>
+    </div>
     
     <!-- This is the body for the header-->
     <div class = "column">
