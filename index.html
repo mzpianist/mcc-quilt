@@ -110,8 +110,7 @@
       }
       #popup {
         display: flex;
-        visibility: hidden;
-        position: absolute;
+        position: fixed;
         height: 100%;
         width: 100%;
         top: 0;
@@ -125,8 +124,10 @@
       }
       #popup-note {
         background-color: white;
+        position: fixed;
         height: 50%;
         width: 50%;
+        left: 24%;
         margin: auto;
         padding: 1em;
         display: flex;
@@ -151,11 +152,6 @@
   </head>
 
   <body>
-    <!-- Making the popups -->
-    <div id="popup">
-      <div id="popup-note">
-      </div>
-    </div>
 
     <!-- This is the body for the header-->
     <div class="column">

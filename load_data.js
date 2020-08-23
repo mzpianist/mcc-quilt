@@ -107,9 +107,14 @@ function shuffle(array) {
 
 function handleClick(array){
   document.getElementById('root').onclick = function(event){
-    const popup = document.getElementById('popup');
-    popup.style.visibility = 'visible';
+    const popup = document.createElement('div');
+    popup.id = 'popup';
+    const popupNote = document.createElement('div');
+    popupNote.id = 'popup-note';
+    document.body.appendChild(popup);
+    popup.appendChild(popupNote);
     const index = event.target.getAttribute('key');
-    popup.innerText = array[index];
+    popupNote.textContent = array[index];
+    
   }
 }
