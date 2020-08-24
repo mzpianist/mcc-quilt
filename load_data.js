@@ -137,11 +137,13 @@ function handleClick(array) {
         for (const i in socs) {
           let img = "";
           // Set icon and hyper link for each social media
+          let account_name = accs[i].substring(1,accs[i].length);
+          console.log("THIS IS WHERE THE ACNT NAME SHOULD SHOW UP:" + account_name)
           switch (socs[i]) {
             case "Instagram":
               img = `
               <a 
-                href="https://www.instagram.com/${acc[i]}/" 
+                href="https://www.instagram.com/${account_name}/" 
                 target="_ig"
                 style="text-decoration:none;"
               >
@@ -151,13 +153,45 @@ function handleClick(array) {
                   width="24" 
                   height="24"
                 >
+                @${account_name}
               </a>`;
               break;
             case "Facebook":
+              img = `
+              <a 
+                href="https://www.facebook.com/${account_name}/" 
+                target="_ig"
+                style="text-decoration:none;"
+              >
+                <img 
+                  alt="Facebook" 
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png
+                  " 
+                  width="24" 
+                  height="24"
+                >
+                @${account_name}
+              </a>`;
               break;
+              case "Twitter":
+                img = `
+                <a 
+                  href="https://www.twitter.com/${account_name}/" 
+                  target="_ig"
+                  style="text-decoration:none;"
+                >
+                  <img 
+                    alt="Twitter" 
+                    src="https://netstorage.ringcentral.com/dpw/apps/BsxqZkBRQaWJ414y5EQOUg/8feb68b7-b638-4f19-9155-cae10c8817db.png"                   " 
+                    width="24" 
+                    height="24"
+                  >
+                  @${account_name}
+                </a>`;
+                break;
           }
           // Add social media icon + link + name
-          socialsAndAccs += img + " " + socs[i] + " " + accs[i] + `</br>`;
+          socialsAndAccs += img + '</br>';
         }
       } catch (e) {
         socialsAndAccs = []; // If organization then leave blank
