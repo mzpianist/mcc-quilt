@@ -58,18 +58,8 @@
       }
       /*This is a flip box*/
       label {
-        -webkit-perspective: 100%;
-        perspective: 100%;
-        -webkit-transform-style: preserve-3d;
-        transform-style: preserve-3d;
-        display: block;
-        width: 58%;
-        height: 97%;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
         cursor: pointer;
       }
       .card {
@@ -133,6 +123,12 @@
         display: flex;
         align-items: center;
         justify-items: center;
+        overflow: auto;
+      }
+      .popup-content {
+        font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro",
+          "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+        text-align: center;
       }
     </style>
 
@@ -152,7 +148,6 @@
   </head>
 
   <body>
-
     <!-- This is the body for the header-->
     <div class="column">
       <div class="row">

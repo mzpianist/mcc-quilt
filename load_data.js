@@ -108,29 +108,76 @@ function shuffle(array) {
 function handleClick(array) {
   // 'Type': [], 'Name': [], 'Email':[], 'Year':[], 'Image':[], 'Bio':[], 'Comments':[], 'Socials':[], 'Accounts':[]}
   document.getElementById("root").onclick = function (event) {
-    const popup = document.createElement("div");
-    popup.id = "popup";
-    const popupNote = document.createElement("div");
-    popupNote.id = "popup-note";
-    document.body.appendChild(popup);
-    popup.appendChild(popupNote);
-    const index = event.target.getAttribute("key");
-    const {
-      type,
-      person,
-      email,
-      year,
-      imageSRC,
-      bio,
-      comments,
-      socials,
-      accounts,
-    } = array[index];
-    popupNote.textContent = type;
+    if (event.target.tagName === "IMG") {
+      const popup = document.createElement("div");
+      popup.id = "popup";
+      const popupNote = document.createElement("div");
+      popupNote.id = "popup-note";
+      document.body.appendChild(popup);
+      popup.appendChild(popupNote);
+      const index = event.target.getAttribute("key");
+      const [
+        type,
+        nameee,
+        email,
+        year,
+        imageSRC,
+        bio,
+        comments,
+        socials,
+        accounts,
+      ] = array[index];
 
-    popup.onclick = function (event) {
-      document.body.removeChild(popup);
-      console.log(event.target)
-    };
+      var socialsAndAccs = "";
+      try {
+        // Make socials into a list
+        const accs = accounts.replace(",", "").split(" ");
+        const socs = socials.replace(",", "").split(" ");
+        // Add image tags for each social
+        for (const i in socs) {
+          let img = "";
+          // Set icon and hyper link for each social media
+          switch (socs[i]) {
+            case "Instagram":
+              img = `
+              <a 
+                href="https://www.instagram.com/${acc[i]}/" 
+                target="_ig"
+                style="text-decoration:none;"
+              >
+                <img 
+                  alt="Instagram" 
+                  src="https://image.flaticon.com/icons/svg/174/174855.svg" 
+                  width="24" 
+                  height="24"
+                >
+              </a>`;
+              break;
+            case "Facebook":
+              break;
+          }
+          // Add social media icon + link + name
+          socialsAndAccs += img + " " + socs[i] + " " + accs[i] + `</br>`;
+        }
+      } catch (e) {
+        socialsAndAccs = []; // If organization then leave blank
+      }
+
+      // Add html to white background
+      popupNote.innerHTML = `
+        <div class = "popup-content" style={{"background-image":${imageSRC}}}>
+          <p font-size = "20px"><b>${nameee}</b></p>
+          <p>${isNaN(year) ? "MIT Group" : "Class of " + year}</p>
+          <p>${bio}</p>
+          <p>${socialsAndAccs}</p>
+        </div>
+      `;
+
+      // remove the popup div and children if user clicks anywhere
+      popup.onclick = function (event) {
+        document.body.removeChild(popup);
+        console.log(event.target);
+      };
+    }
   };
 }
