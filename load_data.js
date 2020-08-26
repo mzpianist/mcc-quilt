@@ -131,8 +131,8 @@ function handleClick(array) {
       var socialsAndAccs = "";
       try {
         // Make socials into a list
-        const accs = accounts.replace(",", "").split(" ");
-        const socs = socials.replace(",", "").split(" ");
+        const accs = accounts.replace(/,/g, '').split(" ");
+        const socs = socials.replace(/,/g, '').split(" ");
         // Add image tags for each social
         for (const i in socs) {
           let img = "";
@@ -193,6 +193,7 @@ function handleClick(array) {
           // Add social media icon + link + name
           socialsAndAccs += img + '</br>';
         }
+        console.log(socialsAndAccs)
       } catch (e) {
         socialsAndAccs = []; // If organization then leave blank
       }
